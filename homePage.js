@@ -69,7 +69,5 @@ window.addEventListener("DOMContentLoaded", () => {
         creazioneCartaOggetto(elemento);
       });
     })
-    .catch((err) => {
-      console.error("Errore durante la creazione dell'oggetto:", err);
-    });
+    .catch((err) => alert(err));
 });

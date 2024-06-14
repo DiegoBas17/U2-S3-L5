@@ -74,15 +74,13 @@ if (id) {
                 throw new Error("Errore durante l'eliminazione dell'oggetto");
               }
             })
-            .catch((err) => {
-              console.error("Errore durante l'eliminazione dell'oggetto:", err);
-            });
+            .catch((err) => alert(err));
         };
         showConfirmModal(eliminaOggetto);
       });
       form.appendChild(bottoneElimina);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => alert(err));
 }
 const form = document.getElementById("FormIdOggetto");
 
@@ -114,9 +112,7 @@ form.addEventListener("submit", (event) => {
           throw new Error("Errore durante la modifica dell'oggetto");
         }
       })
-      .catch((err) => {
-        console.error("Errore durante la modifica dell'oggetto:", err);
-      });
+      .catch((err) => alert(err));
   });
 });
 
