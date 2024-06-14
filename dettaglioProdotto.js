@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
       h2.innerText = prodotto.brand + " " + prodotto.name;
       const price = document.createElement("p");
       price.innerText = prodotto.price + " €";
-      price.className = "text-info fs-3 fw-bold";
+      price.className = "text-primary fs-3 fw-bold";
       const description = document.createElement("p");
       description.innerText = prodotto.description;
       description.className = " fs-5 fw-bold";
