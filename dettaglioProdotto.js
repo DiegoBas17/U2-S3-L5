@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function () {
       description.className = " fs-5 fw-bold";
       const modifica = document.createElement("a");
       modifica.innerText = "Modifica";
-      modifica.className = "btn  btn-info fs-5 my-3";
+      modifica.className = "btn  btn-info fs-5 my-3 ";
       modifica.addEventListener("click", handleEditBtnClick);
       col.append(img, h2, price, description, modifica);
       container.append(col);
@@ -44,5 +44,5 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 const handleEditBtnClick = () => {
-  window.location.assign(`./dettaglioProdotto.html?id=${elementoCard._id}`);
+  window.location.assign(`./backOffice.html?id=${id}`);
 };
