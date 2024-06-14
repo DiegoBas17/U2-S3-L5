@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (resp.ok) {
         return resp.json();
       } else {
-        throw new Error("Errore nella creazione dell'oggetto");
+        throw `Errore ${resp.status} : errore nella creazione del prodotto`;
       }
     })
     .then((caricamentoOggetto) => {

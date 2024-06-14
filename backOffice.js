@@ -34,7 +34,7 @@ if (id) {
       if (resp.ok) {
         return resp.json();
       } else {
-        throw new Error("Errore nel caricamento dell'oggetto");
+        throw `Errore ${resp.status} : errore nella creazione del prodotto`;
       }
     })
     .then((articoloObj) => {
@@ -71,7 +71,7 @@ if (id) {
               if (resp.ok) {
                 console.log("Oggetto eliminato con successo");
               } else {
-                throw new Error("Errore durante l'eliminazione dell'oggetto");
+                throw `Errore ${resp.status} : errore nella creazione del prodotto`;
               }
             })
             .catch((err) => alert(err));
@@ -109,7 +109,7 @@ form.addEventListener("submit", (event) => {
           console.log("Oggetto caricato con successo");
           resetForm();
         } else {
-          throw new Error("Errore durante la modifica dell'oggetto");
+          throw `Errore ${resp.status} : errore nella creazione del prodotto`;
         }
       })
       .catch((err) => alert(err));
